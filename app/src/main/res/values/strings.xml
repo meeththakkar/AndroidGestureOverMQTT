@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GestureOverMQTT</string>
+    <string name="intro_text">Swipe Up and Down and Left and Right and Two Finger Swipe Up and Down</string>
+</resources>

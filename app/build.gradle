@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    packagingOptions {
+
+        exclude 'META-INF/maven/edu.ncsu.mhthakka.mqtt/gesture-common/pom.xml'
+        exclude 'META-INF/maven/edu.ncsu.mhthakka.mqtt/gesture-common/pom.properties'
+    }
+
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "mhthakka.ncsu.edu.gestureovermqtt"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('C:/Users/Meet/.m2/repository/edu/ncsu/mhthakka/mqtt/gesture-common/0.0.1-SNAPSHOT/gesture-common-0.0.1-SNAPSHOT.jar')
+    compile files('C:/Users/Meet/AndroidStudioProjects/GestureOverMQTT/lib/org.eclipse.paho.android.service-1.0.3-20151116.050634-226.jar')
+    compile files('libs/org.eclipse.paho.client.mqttv3-1.0.2.jar')
+}
+
